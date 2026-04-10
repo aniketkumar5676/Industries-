@@ -24,12 +24,18 @@ export default function About() {
                 <span className="w-8 h-1 bg-accent"></span>
                 Who We Are
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">A Legacy of Logistics Excellence</h2>
-              <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                Mandal Industries is a fast-growing logistics company delivering 360-degree solutions tailored to modern industrial needs. We combine domain expertise with technology-driven processes to ensure efficient and reliable operations.
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Journey</h2>
+              <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
+                Mandal Industries was founded in 2018 with a clear vision — to provide dependable and efficient transport solutions in India. Starting from a small base with limited trucks, the company focused on local transport services.
               </p>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Our integrated approach allows us to handle complex supply chain challenges, providing our clients with peace of mind and competitive advantages in their respective markets.
+              <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
+                Through dedication, hard work, and strong client relationships, we expanded our operations into: Packers & Movers, Car & Bike Transportation, Full Truck Load Services, Heavy Equipment Transport, and Over Dimensional Cargo (ODC).
+              </p>
+              <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
+                Over the years, we have successfully completed numerous projects across India, building trust with both individual customers and large industrial clients. We have also worked with reputed organizations such as the Defence Sector, BHEL, HAL, NPCIL, and various Steel & Power Plants.
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed font-medium">
+                Today, Mandal Industries stands as a trusted logistics partner, known for reliability, safety, and professional execution.
               </p>
             </motion.div>
             <motion.div
@@ -67,7 +73,7 @@ export default function About() {
               </div>
               <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                To deliver seamless logistics solutions that enhance efficiency, reduce operational complexity, and drive business growth for our partners across the globe.
+                To provide high-quality logistics and transportation services with a focus on safety, efficiency, and customer satisfaction.
               </p>
             </motion.div>
 
@@ -83,7 +89,7 @@ export default function About() {
               </div>
               <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                To become a trusted logistics partner across industries through continuous innovation, unwavering reliability, and customer-first execution.
+                To become one of India’s most reliable and recognized logistics companies by delivering innovative and scalable transport solutions.
               </p>
             </motion.div>
           </div>

@@ -1,37 +1,43 @@
 import { motion } from "motion/react";
-import { Truck, PackageSearch, Warehouse, Map, ShieldCheck } from "lucide-react";
+import { Truck, PackageSearch, Warehouse, Map, ShieldCheck, Car, Home, HardHat, Settings } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const services = [
   {
     icon: <Truck size={32} />,
     image: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=800&auto=format&fit=crop",
-    title: "Cargo Transportation",
-    description: "Efficient transportation solutions for all types of industrial cargo, ensuring timely and safe delivery.",
+    title: "Transport Services",
+    description: "Complete transport solutions for all types of goods across India, including FTL, LTL, and industrial goods transport.",
   },
   {
-    icon: <Map size={32} />,
+    icon: <Home size={32} />,
     image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800&auto=format&fit=crop",
-    title: "Freight Management",
-    description: "Multi-modal logistics solutions combining road, rail, and other transport methods for optimized delivery.",
+    title: "Packers & Movers",
+    description: "Professional relocation services for individuals and businesses, featuring safe handling and door-to-door service.",
   },
   {
-    icon: <Warehouse size={32} />,
+    icon: <Car size={32} />,
     image: "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?q=80&w=800&auto=format&fit=crop",
-    title: "Warehousing & Storage",
-    description: "Secure and scalable storage solutions with advanced inventory management capabilities.",
+    title: "Car & Bike Carrier",
+    description: "Safe and reliable vehicle transport services across India with covered carriers and scratch-free handling.",
   },
   {
     icon: <PackageSearch size={32} />,
     image: "https://images.unsplash.com/photo-1542296332-2e4473faf563?q=80&w=800&auto=format&fit=crop",
-    title: "Over Dimensional Cargo",
-    description: "Handling heavy and over-dimensional cargo (ODC) with precision engineering and route planning.",
+    title: "ODC (Over Dimensional Cargo)",
+    description: "Specialized transport for oversized and heavy cargo like transformers and turbines with route surveys and escorts.",
   },
   {
-    icon: <ShieldCheck size={32} />,
+    icon: <HardHat size={32} />,
     image: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=800&auto=format&fit=crop",
-    title: "Customs Clearance",
-    description: "Expert consulting and seamless customs clearance for cross-border industrial shipments.",
+    title: "Heavy Equipment Transport",
+    description: "Safe transportation of large and heavy machinery, including construction equipment, cranes, and industrial plants.",
+  },
+  {
+    icon: <Settings size={32} />,
+    image: "https://images.unsplash.com/photo-1519003722824-194d4455a60c?q=80&w=800&auto=format&fit=crop",
+    title: "Project Logistics",
+    description: "Complete project handling from start to finish, including planning, coordination, loading, and timely delivery.",
   },
 ];
 

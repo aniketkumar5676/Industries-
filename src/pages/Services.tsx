@@ -4,11 +4,13 @@ import { CheckCircle2 } from "lucide-react";
 import PageHeader from "../components/PageHeader";
 
 export default function Services() {
-  const supplyChainFeatures = [
-    "Full Truck Load (FTL)",
-    "Part Truck Load (PTL)",
-    "Inventory & warehouse management",
-    "Last-mile delivery",
+  const whyChooseUsFeatures = [
+    "One-Stop Logistics Solution",
+    "Affordable Pricing",
+    "Professional Team",
+    "Safe & Secure Transport",
+    "Fast & Reliable Service",
+    "Customer Satisfaction Focus",
   ];
 
   return (
@@ -32,15 +34,15 @@ export default function Services() {
             >
               <div className="inline-flex items-center gap-2 text-accent font-bold uppercase tracking-wider text-sm mb-4">
                 <span className="w-8 h-1 bg-accent"></span>
-                Supply Chain
+                Why Choose Us
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">End-to-End Solutions</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">Your Trusted Logistics Partner</h2>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
                 We provide end-to-end supply chain management that optimizes your operations from origin to destination. Our tailored approach ensures efficiency at every step.
               </p>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {supplyChainFeatures.map((feature, index) => (
+                {whyChooseUsFeatures.map((feature, index) => (
                   <div key={index} className="flex items-start gap-3 bg-secondary/50 p-4 rounded-xl border-l-4 border-l-accent border-y border-r border-border">
                     <CheckCircle2 className="text-accent shrink-0 mt-0.5" size={20} />
                     <span className="font-medium">{feature}</span>

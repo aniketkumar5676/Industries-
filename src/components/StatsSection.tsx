@@ -1,10 +1,10 @@
 import { motion } from "motion/react";
 
 const stats = [
-  { value: "10+", label: "Years Experience" },
-  { value: "500+", label: "Projects Delivered" },
-  { value: "Pan-India", label: "Logistics Network" },
-  { value: "24/7", label: "Operations Support" },
+  { value: "7+", label: "Trucks & Growing Fleet" },
+  { value: "Pan India", label: "Delivery Network" },
+  { value: "100+", label: "Projects Completed" },
+  { value: "Multi-Crore", label: "Business Growth" },
 ];
 
 export default function StatsSection() {

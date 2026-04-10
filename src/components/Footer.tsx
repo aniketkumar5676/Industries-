@@ -80,15 +80,15 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-sm text-slate-400">
                 <MapPin size={18} className="text-accent shrink-0 mt-0.5" />
-                <span>Mandal Industries<br />India (Pan-India Operations)</span>
+                <span>Mandal Industries Private Limited<br />Mithapur, Patna, Bihar</span>
               </li>
               <li className="flex items-center gap-3 text-sm text-slate-400">
                 <Phone size={18} className="text-accent shrink-0" />
-                <span>+91 1800 123 4567</span>
+                <span>+91 9608877131</span>
               </li>
               <li className="flex items-center gap-3 text-sm text-slate-400">
                 <Mail size={18} className="text-accent shrink-0" />
-                <span>contact@mandalindustries.com</span>
+                <span>mandalindustries.com@gmail.com</span>
               </li>
             </ul>
           </div>

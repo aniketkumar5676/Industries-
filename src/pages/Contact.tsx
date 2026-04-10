@@ -54,7 +54,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-xl mb-1">Headquarters</h3>
-                    <p className="text-muted-foreground">Mandal Industries<br />India (Pan-India Operations)</p>
+                    <p className="text-muted-foreground">Mandal Industries Private Limited<br />Mithapur, Patna, Bihar</p>
                   </div>
                 </div>
                 
@@ -63,8 +63,8 @@ export default function Contact() {
                     <Phone size={24} />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-xl mb-1">Phone</h3>
-                    <p className="text-muted-foreground">+91 1800 123 4567<br />+91 98765 43210</p>
+                    <h3 className="font-semibold text-xl mb-1">Phone / WhatsApp</h3>
+                    <p className="text-muted-foreground">+91 9608877131</p>
                   </div>
                 </div>
                 
@@ -74,7 +74,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-xl mb-1">Email</h3>
-                    <p className="text-muted-foreground">contact@mandalindustries.com<br />quotes@mandalindustries.com</p>
+                    <p className="text-muted-foreground">mandalindustries.com@gmail.com</p>
                   </div>
                 </div>
                 
@@ -84,7 +84,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-xl mb-1">Operating Hours</h3>
-                    <p className="text-muted-foreground">24/7 Operations Support<br />Office: Mon-Sat, 9:00 AM - 6:00 PM</p>
+                    <p className="text-muted-foreground">Mon–Sat: 9 AM – 8 PM</p>
                   </div>
                 </div>
               </div>

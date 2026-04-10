@@ -1,15 +1,10 @@
 import { motion } from "motion/react";
-import { Train, Zap, Droplet, Factory, HardHat, ChevronLeft, ChevronRight } from "lucide-react";
+import { Train, Zap, Droplet, Factory, HardHat, ChevronLeft, ChevronRight, ShieldCheck } from "lucide-react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { useCallback } from "react";
 
 const industries = [
-  { 
-    name: "Rail & Transit", 
-    icon: <Train size={24} />,
-    image: "https://images.unsplash.com/photo-1474487548417-781cb71495f3?q=80&w=800&auto=format&fit=crop"
-  },
   { 
     name: "Power & Energy", 
     icon: <Zap size={24} />,
@@ -26,9 +21,24 @@ const industries = [
     image: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=800&auto=format&fit=crop"
   },
   { 
-    name: "Heavy Engineering", 
+    name: "Construction & Infrastructure", 
     icon: <HardHat size={24} />,
-    image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=800&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=800&auto=format&fit=crop"
+  },
+  { 
+    name: "Railways", 
+    icon: <Train size={24} />,
+    image: "https://images.unsplash.com/photo-1474487548417-781cb71495f3?q=80&w=800&auto=format&fit=crop"
+  },
+  { 
+    name: "Defence & Govt Projects", 
+    icon: <ShieldCheck size={24} />,
+    image: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=800&auto=format&fit=crop"
+  },
+  { 
+    name: "Manufacturing Industries", 
+    icon: <Factory size={24} />,
+    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop"
   },
 ];
 

@@ -46,7 +46,7 @@ export default function HeroSection() {
           >
             Mandal Industries – <br />
             <span className="text-accent">
-              Powering Modern Logistics
+              India’s Trusted Name in Logistics & Transport
             </span>
           </motion.h1>
 
@@ -56,7 +56,7 @@ export default function HeroSection() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-lg md:text-xl text-slate-300 mb-10 max-w-2xl leading-relaxed"
           >
-            End-to-end logistics and industrial solutions designed to move your business forward with speed, reliability, and precision.
+            Delivering excellence in Packers & Movers, Car Carrier, Heavy Transport, and Over Dimensional Cargo (ODC) services with unmatched reliability, safety, and nationwide reach.
           </motion.p>
 
           <motion.div
@@ -69,15 +69,17 @@ export default function HeroSection() {
               to="/contact"
               className="inline-flex items-center justify-center gap-2 bg-accent text-accent-foreground px-8 py-4 rounded-sm font-bold hover:bg-accent/90 transition-all hover:gap-3 shadow-lg hover:shadow-accent/25 uppercase tracking-wide"
             >
-              Get a Quote
+              Get Instant Quote
               <ArrowRight size={18} />
             </Link>
-            <Link
-              to="/services"
+            <a
+              href="https://wa.me/919608877131"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-4 rounded-sm font-bold border border-accent text-accent bg-slate-900/50 backdrop-blur-sm hover:bg-accent hover:text-accent-foreground transition-colors uppercase tracking-wide"
             >
-              Explore Services
-            </Link>
+              WhatsApp Now
+            </a>
           </motion.div>
         </div>
       </div>

@@ -67,13 +67,13 @@ export default function AboutSection() {
           >
             <div className="inline-flex items-center gap-2 text-accent font-bold uppercase tracking-wider text-sm mb-4">
               <span className="w-8 h-1 bg-accent"></span>
-              About Us
+              Who We Are
             </div>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6 leading-tight">
               Delivering 360-Degree Logistics Solutions
             </h2>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              Mandal Industries is an integrated logistics service provider offering complete supply chain solutions across multiple industries. We specialize in project cargo, freight management, warehousing, and industrial transport solutions.
+              Mandal Industries is a professionally managed logistics company headquartered in Patna, Bihar. Since 2018, we have grown into a multi-dimensional logistics service provider, handling everything from small household goods to large-scale industrial and ODC cargo.
             </p>
             
             <div className="space-y-4 mb-8">

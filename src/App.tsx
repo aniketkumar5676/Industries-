@@ -11,11 +11,13 @@ import About from "./pages/About";
 import Services from "./pages/Services";
 import Industries from "./pages/Industries";
 import Contact from "./pages/Contact";
+import ScrollToTop from "./components/ScrollToTop";
 
 export default function App() {
   return (
     <ThemeProvider defaultTheme="system" storageKey="mandal-theme">
       <Router>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
