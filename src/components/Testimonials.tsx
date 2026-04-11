@@ -37,7 +37,7 @@ export default function Testimonials() {
   }, [emblaApi]);
 
   return (
-    <section className="relative py-24 overflow-hidden">
+    <section className="relative py-16 overflow-hidden">
       <div className="absolute inset-0 z-0">
         <img
           src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?q=80&w=2075&auto=format&fit=crop"

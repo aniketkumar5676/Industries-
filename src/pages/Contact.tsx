@@ -20,8 +20,8 @@ export default function Contact() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2 }}
             >
-              <div className="inline-flex items-center gap-2 text-accent font-bold uppercase tracking-wider text-sm mb-4">
-                <span className="w-8 h-1 bg-accent"></span>
+              <div className="inline-flex items-center gap-2 text-primary font-bold uppercase tracking-wider text-sm mb-4">
+                <span className="w-8 h-1 bg-primary"></span>
                 Get a Quote
               </div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Let's Work Together</h2>
@@ -38,8 +38,8 @@ export default function Contact() {
               transition={{ delay: 0.3 }}
               className="lg:pl-12"
             >
-              <div className="inline-flex items-center gap-2 text-accent font-bold uppercase tracking-wider text-sm mb-4">
-                <span className="w-8 h-1 bg-accent"></span>
+              <div className="inline-flex items-center gap-2 text-primary font-bold uppercase tracking-wider text-sm mb-4">
+                <span className="w-8 h-1 bg-primary"></span>
                 Office Information
               </div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Network</h2>
@@ -49,7 +49,7 @@ export default function Contact() {
               
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-accent/10 text-accent rounded-lg flex items-center justify-center shrink-0">
+                  <div className="w-12 h-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center shrink-0">
                     <MapPin size={24} />
                   </div>
                   <div>
@@ -59,7 +59,7 @@ export default function Contact() {
                 </div>
                 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-accent/10 text-accent rounded-lg flex items-center justify-center shrink-0">
+                  <div className="w-12 h-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center shrink-0">
                     <Phone size={24} />
                   </div>
                   <div>
@@ -69,7 +69,7 @@ export default function Contact() {
                 </div>
                 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-accent/10 text-accent rounded-lg flex items-center justify-center shrink-0">
+                  <div className="w-12 h-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center shrink-0">
                     <Mail size={24} />
                   </div>
                   <div>
@@ -79,7 +79,7 @@ export default function Contact() {
                 </div>
                 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-accent/10 text-accent rounded-lg flex items-center justify-center shrink-0">
+                  <div className="w-12 h-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center shrink-0">
                     <Clock size={24} />
                   </div>
                   <div>

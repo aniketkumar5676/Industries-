@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { Truck, Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
-import logoLight from "../assets/logo_light_nav.png";
+
+const logoLight = "https://i.ibb.co/zTtTrG9R/logo-light-nav.png";
+const logoDark = "https://i.ibb.co/fVFr1Yqs/logo-dark-nav.png";
 
 export default function Footer() {
   return (
@@ -12,9 +14,10 @@ export default function Footer() {
           <div className="space-y-4">
             <Link to="/" className="flex items-center gap-2">
               <img 
-                src={logoLight} 
+                src={logoDark} 
                 alt="Mandal Industries Logo" 
                 className="h-12 w-auto object-contain"
+                referrerPolicy="no-referrer"
               />
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed">
@@ -41,16 +44,16 @@ export default function Footer() {
             <h3 className="font-semibold text-lg mb-4 text-white">Quick Links</h3>
             <ul className="space-y-3">
               <li>
-                <Link to="/about" className="text-slate-400 hover:text-accent text-sm transition-colors">About Us</Link>
+                <Link to="/about" className="text-slate-400 hover:text-primary text-sm transition-colors">About Us</Link>
               </li>
               <li>
-                <Link to="/services" className="text-slate-400 hover:text-accent text-sm transition-colors">Our Services</Link>
+                <Link to="/services" className="text-slate-400 hover:text-primary text-sm transition-colors">Our Services</Link>
               </li>
               <li>
-                <Link to="/industries" className="text-slate-400 hover:text-accent text-sm transition-colors">Industries We Serve</Link>
+                <Link to="/industries" className="text-slate-400 hover:text-primary text-sm transition-colors">Industries We Serve</Link>
               </li>
               <li>
-                <Link to="/contact" className="text-slate-400 hover:text-accent text-sm transition-colors">Contact Us</Link>
+                <Link to="/contact" className="text-slate-400 hover:text-primary text-sm transition-colors">Contact Us</Link>
               </li>
             </ul>
           </div>
@@ -60,16 +63,16 @@ export default function Footer() {
             <h3 className="font-semibold text-lg mb-4 text-white">Services</h3>
             <ul className="space-y-3">
               <li>
-                <Link to="/services" className="text-slate-400 hover:text-accent text-sm transition-colors">Cargo Transport</Link>
+                <Link to="/services" className="text-slate-400 hover:text-primary text-sm transition-colors">Cargo Transport</Link>
               </li>
               <li>
-                <Link to="/services" className="text-slate-400 hover:text-accent text-sm transition-colors">Freight Management</Link>
+                <Link to="/services" className="text-slate-400 hover:text-primary text-sm transition-colors">Freight Management</Link>
               </li>
               <li>
-                <Link to="/services" className="text-slate-400 hover:text-accent text-sm transition-colors">Warehousing</Link>
+                <Link to="/services" className="text-slate-400 hover:text-primary text-sm transition-colors">Warehousing</Link>
               </li>
               <li>
-                <Link to="/services" className="text-slate-400 hover:text-accent text-sm transition-colors">Project Logistics</Link>
+                <Link to="/services" className="text-slate-400 hover:text-primary text-sm transition-colors">Project Logistics</Link>
               </li>
             </ul>
           </div>
@@ -79,15 +82,15 @@ export default function Footer() {
             <h3 className="font-semibold text-lg mb-4 text-white">Contact Info</h3>
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-sm text-slate-400">
-                <MapPin size={18} className="text-accent shrink-0 mt-0.5" />
+                <MapPin size={18} className="text-primary shrink-0 mt-0.5" />
                 <span>Mandal Industries Private Limited<br />Mithapur, Patna, Bihar</span>
               </li>
               <li className="flex items-center gap-3 text-sm text-slate-400">
-                <Phone size={18} className="text-accent shrink-0" />
+                <Phone size={18} className="text-primary shrink-0" />
                 <span>+91 9608877131</span>
               </li>
               <li className="flex items-center gap-3 text-sm text-slate-400">
-                <Mail size={18} className="text-accent shrink-0" />
+                <Mail size={18} className="text-primary shrink-0" />
                 <span>mandalindustries.com@gmail.com</span>
               </li>
             </ul>
@@ -99,8 +102,8 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Mandal Industries. All rights reserved.
           </p>
           <div className="flex items-center gap-6 text-sm text-slate-400">
-            <a href="#" className="hover:text-accent transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-accent transition-colors">Terms of Service</a>
+            <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
+            <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>
           </div>
         </div>
       </div>

@@ -20,8 +20,8 @@ export default function About() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <div className="inline-flex items-center gap-2 text-accent font-bold uppercase tracking-wider text-sm mb-4">
-                <span className="w-8 h-1 bg-accent"></span>
+              <div className="inline-flex items-center gap-2 text-primary font-bold uppercase tracking-wider text-sm mb-4">
+                <span className="w-8 h-1 bg-primary"></span>
                 Who We Are
               </div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Journey</h2>
@@ -66,7 +66,7 @@ export default function About() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="bg-card border-t-4 border-t-accent border-x border-b border-border p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+              className="bg-card border-t-4 border-t-primary border-x border-b border-border p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow"
             >
               <div className="w-14 h-14 bg-secondary text-foreground rounded-lg flex items-center justify-center mb-6">
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
@@ -82,7 +82,7 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="bg-card border-t-4 border-t-accent border-x border-b border-border p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+              className="bg-card border-t-4 border-t-primary border-x border-b border-border p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow"
             >
               <div className="w-14 h-14 bg-secondary text-foreground rounded-lg flex items-center justify-center mb-6">
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2 12h10"/><path d="M9 4v16"/><path d="m3 9 3 3-3 3"/></svg>

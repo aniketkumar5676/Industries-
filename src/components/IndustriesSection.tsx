@@ -54,12 +54,12 @@ export default function IndustriesSection() {
   }, [emblaApi]);
 
   return (
-    <section className="py-24 bg-background overflow-hidden relative">
+    <section className="py-16 bg-background overflow-hidden relative">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
           <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 text-accent font-bold uppercase tracking-wider text-sm mb-4">
-              <span className="w-8 h-1 bg-accent"></span>
+            <div className="inline-flex items-center gap-2 text-primary font-bold uppercase tracking-wider text-sm mb-4">
+              <span className="w-8 h-1 bg-primary"></span>
               Sectors
             </div>
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
@@ -109,9 +109,9 @@ export default function IndustriesSection() {
                   <div className="absolute bottom-0 left-0 w-full p-6 flex items-end justify-between">
                     <div>
                       <h3 className="text-2xl font-bold text-white mb-1">{industry.name}</h3>
-                      <div className="w-12 h-1 bg-accent transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
+                      <div className="w-12 h-1 bg-primary transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
                     </div>
-                    <div className="w-12 h-12 rounded-full bg-primary/90 text-primary-foreground flex items-center justify-center backdrop-blur-sm group-hover:bg-accent group-hover:text-accent-foreground transition-colors">
+                    <div className="w-12 h-12 rounded-full bg-primary/90 text-primary-foreground flex items-center justify-center backdrop-blur-sm group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                       {industry.icon}
                     </div>
                   </div>

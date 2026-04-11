@@ -9,7 +9,7 @@ const stats = [
 
 export default function StatsSection() {
   return (
-    <section className="relative py-24 overflow-hidden">
+    <section className="relative py-16 overflow-hidden">
       <div className="absolute inset-0 z-0">
         <img
           src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=2070&auto=format&fit=crop"

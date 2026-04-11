@@ -1,29 +1,84 @@
-import { motion } from "motion/react";
+import { motion, AnimatePresence } from "motion/react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
+import { useState, useEffect, useCallback } from "react";
+
+const slides = [
+  {
+    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1920&auto=format&fit=crop",
+    title: "Warehousing & Distribution",
+    description: "State-of-the-art storage solutions with inventory management and order fulfillment across major industrial hubs."
+  },
+  {
+    image: "https://images.unsplash.com/photo-1519003722824-194d4455a60c?q=80&w=1920&auto=format&fit=crop",
+    title: "Full Truck Load (FTL)",
+    description: "Dedicated transport solutions for large volume shipments across India with unmatched reliability and safety."
+  },
+  {
+    image: "https://images.unsplash.com/photo-1580674684081-7617fbf3d745?q=80&w=1920&auto=format&fit=crop",
+    title: "Project Logistics",
+    description: "End-to-end management of complex, high-value industrial projects from planning to final installation."
+  },
+  {
+    image: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=1920&auto=format&fit=crop",
+    title: "Freight Forwarding",
+    description: "Global logistics coordination including customs clearance, documentation, and international shipping."
+  },
+  {
+    image: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=1920&auto=format&fit=crop",
+    title: "ODC & Heavy Lift",
+    description: "Specialized transport for oversized and heavy cargo like transformers and turbines with precision."
+  }
+];
 
 export default function HeroSection() {
+  const [emblaRef, emblaApi] = useEmblaCarousel({ 
+    loop: true,
+    skipSnaps: false,
+    dragFree: false,
+  }, [Autoplay({ delay: 5000, stopOnInteraction: false })]);
+
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return;
+    setSelectedIndex(emblaApi.selectedScrollSnap());
+  }, [emblaApi]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    onSelect();
+    emblaApi.on("select", onSelect);
+    emblaApi.on("reInit", onSelect);
+  }, [emblaApi, onSelect]);
+
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-32 pb-20">
-      {/* Background Video & Overlay */}
+    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden pt-32 pb-16">
+      {/* Background Slider & Overlay */}
       <div className="absolute inset-0 z-0">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          poster="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?q=80&w=2072&auto=format&fit=crop"
-          className="w-full h-full object-cover"
-        >
-          <source src="https://assets.mixkit.co/videos/preview/mixkit-commercial-port-with-cranes-and-containers-4246-large.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <div className="absolute inset-0 bg-slate-950/50 dark:bg-slate-950/60" />
-        {/* Industrial Grid Pattern Overlay */}
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAwIDEwIEwgNDAgMTAgTSAxMCAwIEwgMTAgNDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyNTUsIDI1NSwgMjU1LCAwLjA1KSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] opacity-50" />
+        <div className="embla h-full cursor-grab active:cursor-grabbing" ref={emblaRef}>
+          <div className="embla__container h-full flex">
+            {slides.map((slide, index) => (
+              <div key={index} className="embla__slide flex-[0_0_100%] min-w-0 h-full relative">
+                <img
+                  src={slide.image}
+                  alt={slide.title}
+                  className="w-full h-full object-cover"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+        {/* Reduced opacity overlay for better visibility - pointer-events-none to allow dragging */}
+        <div className="absolute inset-0 bg-slate-950/40 dark:bg-slate-950/50 pointer-events-none" />
+        {/* Industrial Grid Pattern Overlay - pointer-events-none to allow dragging */}
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAwIDEwIEwgNDAgMTAgTSAxMCAwIEwgMTAgNDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyNTUsIDI1NSwgMjU1LCAwLjA1KSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] opacity-30 pointer-events-none" />
       </div>
 
-      <div className="container mx-auto px-4 md:px-6 relative z-10">
+      <div className="container mx-auto px-4 md:px-6 relative z-10 pointer-events-none">
         <div className="max-w-3xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -38,32 +93,32 @@ export default function HeroSection() {
             Integrated Logistics Provider
           </motion.div>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 leading-[1.1] text-white"
-          >
-            Mandal Industries – <br />
-            <span className="text-accent">
-              India’s Trusted Name in Logistics & Transport
-            </span>
-          </motion.h1>
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={selectedIndex}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.5 }}
+            >
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6 leading-[1.1] text-white">
+                Mandal Industries – <br />
+                <span className="text-accent">
+                  {slides[selectedIndex].title}
+                </span>
+              </h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-lg md:text-xl text-slate-300 mb-10 max-w-2xl leading-relaxed"
-          >
-            Delivering excellence in Packers & Movers, Car Carrier, Heavy Transport, and Over Dimensional Cargo (ODC) services with unmatched reliability, safety, and nationwide reach.
-          </motion.p>
+              <p className="text-base md:text-lg text-slate-300 mb-10 max-w-2xl leading-relaxed">
+                {slides[selectedIndex].description}
+              </p>
+            </motion.div>
+          </AnimatePresence>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="flex flex-col sm:flex-row items-start sm:items-center gap-4"
+            className="flex flex-col sm:flex-row items-start sm:items-center gap-4 pointer-events-auto"
           >
             <Link
               to="/contact"
@@ -81,6 +136,20 @@ export default function HeroSection() {
               WhatsApp Now
             </a>
           </motion.div>
+          
+          {/* Slider Indicators */}
+          <div className="flex gap-2 mt-12 pointer-events-auto">
+            {slides.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => emblaApi?.scrollTo(index)}
+                className={`h-1.5 transition-all duration-300 rounded-full ${
+                  index === selectedIndex ? "w-8 bg-accent" : "w-4 bg-white/30"
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>

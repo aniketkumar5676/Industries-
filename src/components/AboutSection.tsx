@@ -21,7 +21,7 @@ export default function AboutSection() {
   ];
 
   return (
-    <section className="py-24 bg-background overflow-hidden">
+    <section className="py-16 bg-background overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div
@@ -65,8 +65,8 @@ export default function AboutSection() {
             transition={{ duration: 0.6 }}
             className="lg:pl-12"
           >
-            <div className="inline-flex items-center gap-2 text-accent font-bold uppercase tracking-wider text-sm mb-4">
-              <span className="w-8 h-1 bg-accent"></span>
+            <div className="inline-flex items-center gap-2 text-primary font-bold uppercase tracking-wider text-sm mb-4">
+              <span className="w-8 h-1 bg-primary"></span>
               Who We Are
             </div>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6 leading-tight">
@@ -87,7 +87,7 @@ export default function AboutSection() {
 
             <Link
               to="/about"
-              className="inline-flex items-center justify-center px-8 py-4 rounded-sm font-bold bg-accent text-accent-foreground hover:bg-accent/90 transition-colors uppercase tracking-wide shadow-md"
+              className="inline-flex items-center justify-center px-8 py-4 rounded-sm font-bold bg-primary text-primary-foreground hover:bg-primary/90 transition-colors uppercase tracking-wide shadow-md"
             >
               More About Us
             </Link>
