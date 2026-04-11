@@ -10,12 +10,11 @@ export default function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <Link to="/" className="flex items-center gap-2">
-              <div className="bg-primary text-primary-foreground p-1.5 rounded-lg">
-                <Truck size={20} />
-              </div>
-              <span className="font-bold text-xl tracking-tight text-white">
-                Mandal <span className="text-accent">Industries</span>
-              </span>
+              <img 
+                src="/assets/logo_dark_nav.png" 
+                alt="Mandal Industries Logo" 
+                className="h-12 w-auto object-contain"
+              />
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed">
               End-to-end logistics and industrial solutions designed to move your business forward with speed, reliability, and precision.

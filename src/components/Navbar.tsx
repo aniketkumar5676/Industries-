@@ -10,19 +10,35 @@ export default function Navbar() {
   const { theme, setTheme } = useTheme();
   const location = useLocation();
   const isHomePage = location.pathname === "/";
+  const isScrolledThreshold = 20;
   const isTransparent = isHomePage && !isScrolled;
+
+  const [resolvedTheme, setResolvedTheme] = useState<"light" | "dark">("light");
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      setIsScrolled(window.scrollY > isScrolledThreshold);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect(() => {
+    if (theme === "system") {
+      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      setResolvedTheme(systemTheme);
+    } else {
+      setResolvedTheme(theme as "light" | "dark");
+    }
+  }, [theme]);
+
+  useEffect(() => {
     setMobileMenuOpen(false);
   }, [location.pathname]);
+
+  const logoSrc = isTransparent || resolvedTheme === "dark" 
+    ? "/assets/logo_dark_nav.png" 
+    : "/assets/logo_light_nav.png";
 
   const navLinks = [
     { name: "Home", path: "/" },
@@ -43,12 +59,11 @@ export default function Navbar() {
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 group">
-          <div className="bg-primary text-primary-foreground p-2 rounded-lg group-hover:bg-primary/90 transition-colors">
-            <Truck size={24} />
-          </div>
-          <span className={`font-bold text-xl tracking-tight ${isTransparent ? "text-white" : "text-foreground"}`}>
-            Mandal <span className="text-primary">Industries</span>
-          </span>
+          <img 
+            src={logoSrc} 
+            alt="Mandal Industries Logo" 
+            className="h-10 w-auto object-contain transition-all duration-300"
+          />
         </Link>
 
         {/* Desktop Nav */}
