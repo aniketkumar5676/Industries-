@@ -101,14 +101,14 @@ export default function HeroSection() {
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.5 }}
             >
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6 leading-[1.1] text-white">
+              <h1 className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-[1.1] text-white">
                 Mandal Industries – <br />
                 <span className="text-accent">
                   {slides[selectedIndex].title}
                 </span>
               </h1>
 
-              <p className="text-base md:text-lg text-slate-300 mb-10 max-w-2xl leading-relaxed">
+              <p className="text-lg md:text-xl text-slate-300 mb-10 max-w-2xl leading-relaxed">
                 {slides[selectedIndex].description}
               </p>
             </motion.div>

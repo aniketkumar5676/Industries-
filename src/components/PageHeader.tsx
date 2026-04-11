@@ -8,7 +8,7 @@ interface PageHeaderProps {
 
 export default function PageHeader({ title, subtitle, image }: PageHeaderProps) {
   return (
-    <section className="relative overflow-hidden border-b border-border mt-16 bg-slate-950">
+    <section className="relative overflow-hidden border-b border-border mt-[104px] bg-slate-950">
       <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[300px] lg:min-h-[350px]">
         {/* Left Side: Content */}
         <div className="flex flex-col justify-center p-8 md:p-12 lg:p-16 relative z-10 bg-slate-950">
