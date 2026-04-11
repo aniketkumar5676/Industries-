@@ -3,6 +3,8 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Moon, Sun, Truck } from "lucide-react";
 import { useTheme } from "./ThemeProvider";
 import { motion, AnimatePresence } from "motion/react";
+import logoLight from "../assets/logo_light_nav.png";
+import logoDark from "../assets/logo_dark_nav.png";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -37,8 +39,8 @@ export default function Navbar() {
   }, [location.pathname]);
 
   const logoSrc = isTransparent || resolvedTheme === "dark" 
-    ? "/assets/logo_dark_nav.png" 
-    : "/assets/logo_light_nav.png";
+    ? logoLight 
+    : logoDark;
 
   const navLinks = [
     { name: "Home", path: "/" },

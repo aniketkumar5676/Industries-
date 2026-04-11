@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Truck, Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import logoLight from "../assets/logo_light_nav.png";
 
 export default function Footer() {
   return (
@@ -11,7 +12,7 @@ export default function Footer() {
           <div className="space-y-4">
             <Link to="/" className="flex items-center gap-2">
               <img 
-                src="/assets/logo_dark_nav.png" 
+                src={logoLight} 
                 alt="Mandal Industries Logo" 
                 className="h-12 w-auto object-contain"
               />
